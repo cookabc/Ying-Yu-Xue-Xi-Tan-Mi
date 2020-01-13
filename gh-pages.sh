@@ -1,14 +1,24 @@
-# create gh-pages branch
-git checkout --orphan gh-pages
-git rm -rf .
-touch README.md
-git add README.md
-git commit -m 'initial gh-pages commit'
+# install the plugins and build the static site
+gitbook install && gitbook build
+
+# checkout to the gh-pages branch
+git checkout gh-pages
+
+# copy the static site files into the current directory.
+cp -R _book/* .
+
+# remove 'node_modules' and '_book' directory
+git clean -fx node_modules
+git clean -fx _book
+
+# add all files
+git add .
+
+# commit
+git commit -a -m "Update docs"
+
+# push to the origin
 git push origin gh-pages
 
-# add gh-pages as submodule
+# checkout to the master branch
 git checkout master
-git submodule add -b gh-pages git@github.com:skratchdot/MYPROJECT.git _site
-git commit -m "added gh-pages as submodule"
-git push origin master
-git submodule init
