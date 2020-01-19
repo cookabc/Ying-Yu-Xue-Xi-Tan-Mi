@@ -8,6 +8,6 @@
 
 ***
 
-[在线阅读]()
+[在线阅读]() [作者博客](http://www.tertioenglish.com/)
 
 版权所有：[tertio zhang](https://read.douban.com/author/63703632/) / [豆瓣阅读](https://read.douban.com/column/2449267/)
